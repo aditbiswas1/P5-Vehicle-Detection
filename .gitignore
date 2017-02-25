@@ -5,3 +5,4 @@ non-vehicles/*
 *.pyc
 __MACOSX/*
 .ipynb_checkpoints/*
+.DS_Store
