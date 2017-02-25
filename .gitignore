@@ -1,0 +1,7 @@
+vehicles.zip
+non-vehicles.zip
+vehicles/*
+non-vehicles/*
+*.pyc
+__MACOSX/*
+.ipynb_checkpoints/*
