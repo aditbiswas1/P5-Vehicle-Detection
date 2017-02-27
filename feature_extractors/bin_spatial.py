@@ -31,7 +31,7 @@ def color_hist(img, nbins=32, bins_range=(0, 256)):
 function takes image, color space and params for color_hist and bin_spatial
 returns color features of the image
 '''
-def extract_features(image, cspace='RGB', spatial_size=(32, 32),
+def extract_color_features(image, cspace='RGB', spatial_size=(32, 32),
                         hist_bins=32, hist_range=(0, 256)):
     if cspace != 'RGB':
             if cspace == 'HSV':
@@ -42,6 +42,8 @@ def extract_features(image, cspace='RGB', spatial_size=(32, 32),
                 feature_image = cv2.cvtColor(image, cv2.COLOR_RGB2HLS)
             elif cspace == 'YUV':
                 feature_image = cv2.cvtColor(image, cv2.COLOR_RGB2YUV)
+            elif cspace == 'YCrCb':
+                feature_image = cv2.cvtColor(image, cv2.COLOR_RGB2YCrCb)
             else:
                 raise NotImplementedError
     else: 
